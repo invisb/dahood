@@ -19,6 +19,8 @@ if success and response.StatusCode == 200 then
         for _, code in ipairs(codes) do
             local args = {[1] = "EnterPromoCode",[2] = code}
             game:GetService("ReplicatedStorage"):WaitForChild("MainEvent"):FireServer(unpack(args))
+            print(code)
+            wait(5)
         end
     end
 else
