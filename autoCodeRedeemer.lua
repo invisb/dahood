@@ -1,3 +1,7 @@
+if not game:IsLoaded() then
+	game.Loaded:Wait()
+end
+
 local success, response = pcall(request, {
     Url = "https://gamerant.com/roblox-da-hood-codes/",
     Method = "GET",
